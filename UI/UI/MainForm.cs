@@ -108,5 +108,16 @@ namespace UI
         private void epsBox_TextChanged(object sender, EventArgs e)
         {
         }
+
+        private void epsBox_Leave(object sender, EventArgs e)
+        {
+            if (!Double.TryParse(epsBox.Text, out double result))
+            {
+                MessageBox.Show("Введите корректное значение погрешности.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                epsBox.Text = "1e-10";
+            }
+
+
+        }
     }
 }

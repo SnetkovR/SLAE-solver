@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.timeBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +48,6 @@
             this.ChoseOutput = new System.Windows.Forms.Button();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuOpenOutput = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.groupBox2.SuspendLayout();
             this.inputData.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -68,6 +68,22 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Выбор методов решения";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "LOS",
+            "GMRes",
+            "BiCGStab",
+            "Jacoby",
+            "Seidel",
+            "Pardiso",
+            "CGM"});
+            this.checkedListBox1.Location = new System.Drawing.Point(13, 46);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(153, 156);
+            this.checkedListBox1.TabIndex = 27;
             // 
             // label6
             // 
@@ -107,14 +123,14 @@
             // 
             // epsBox
             // 
-            this.epsBox.Enabled = false;
             this.epsBox.Location = new System.Drawing.Point(172, 63);
             this.epsBox.Name = "epsBox";
             this.epsBox.Size = new System.Drawing.Size(68, 24);
             this.epsBox.TabIndex = 8;
-            this.epsBox.Text = "-10";
+            this.epsBox.Text = "1e-10";
             this.epsBox.TextChanged += new System.EventHandler(this.epsBox_TextChanged);
             this.epsBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.epsBox_KeyPress);
+            this.epsBox.Leave += new System.EventHandler(this.epsBox_Leave);
             // 
             // inputData
             // 
@@ -255,22 +271,6 @@
             this.toolStripMenuOpenOutput.Name = "toolStripMenuOpenOutput";
             this.toolStripMenuOpenOutput.Size = new System.Drawing.Size(186, 20);
             this.toolStripMenuOpenOutput.Text = "Открыть файл с результатом";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "LOS",
-            "GMRes",
-            "BiCGStab",
-            "Jacoby",
-            "Seidel",
-            "Pardiso",
-            "CGM"});
-            this.checkedListBox1.Location = new System.Drawing.Point(13, 46);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(153, 156);
-            this.checkedListBox1.TabIndex = 27;
             // 
             // MainForm
             // 
